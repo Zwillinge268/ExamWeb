@@ -34,7 +34,7 @@
             <h4>請將試題檔案檔名更改為答題檔案檔名 <font color="red">准考證號碼 - 姓名</font></h4>
             <h4>例如：2080260099-曾國霖.docx</h4>
             <br /><br />
-            <asp:FileUpload ID="FileUpload1" runat="server" Font-Size="Large"/>
+            <asp:FileUpload ID="FileUpload1" runat="server" Font-Size="Large" accept=".docx"/>
             <br />
             <asp:Button ID="ButtonUpload" runat="server" Text="上傳檔案" OnClick="ButtonUpload_Click" Font-Size="Large"/>
             <br /><br />
@@ -42,5 +42,9 @@
         </center>
     </div>
 </div>
+
+<!------------------------------------------------------------------------------------------->
+
+    <center><span class="alert-danger"><h3><%= messageIP %></h3></span></center>
 
 </asp:Content>
