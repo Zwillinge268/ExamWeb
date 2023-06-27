@@ -10,9 +10,12 @@ namespace IMMustExam
         public string messageDL = null;
         public string messageIP = null;
         public string userIP = null;
+        public int thisYear = DateTime.Now.Year;
+        public int TWYear;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            TWYear = thisYear - 1911;
             try
             {
                 userIP = Request.UserHostAddress.Substring(0, 11);
@@ -36,9 +39,10 @@ namespace IMMustExam
 
         protected void ButtonDownload_Click(object sender, EventArgs e)
         {
+            string year = (thisYear + 1).ToString();
             try
             {
-                string filePathDL = "/Asset/2023術科原始檔.docx";
+                string filePathDL = "/Asset/"+ year +"術科原始檔.docx";
                 Response.Redirect(filePathDL);
             }
             catch
@@ -62,7 +66,7 @@ namespace IMMustExam
                         FileUpload1.SaveAs(filePath + fileName);
                         Response.Redirect("UploadSuccess.aspx");
                     }
-                    else messageUL = "- 只能上傳 Word(.docx) 檔 -";                                        
+                    else messageUL = "- 上傳失敗(僅限上傳 *.docx 檔) -";                                        
                 }
                 else messageUL = "- 請選擇要上傳的檔案 -";
             }

@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <center><h1>- 112學年度明新科技大學資管系 -</h1></center>
+    <center><h1>- <%=TWYear %>學年度明新科技大學資管系 -</h1></center>
     <center><h2>- 四技甄選【商管群】術科考試 -</h2></center>
     <br /><br />
 
@@ -17,7 +17,7 @@
             <br /><br />
             <asp:Button ID="ButtonDownload" runat="server" Text="下載試題" OnClick="ButtonDownload_Click" Font-Size="Large"/>
             <br /><br />
-            <span class="alert-danger"><h4><%= messageDL %></h4></span>
+            <span style="color:red"><h4><b><%= messageDL %></b></h4></span>
         </center>
     </div>
 </div>
@@ -38,13 +38,13 @@
             <br />
             <asp:Button ID="ButtonUpload" runat="server" Text="上傳檔案" OnClick="ButtonUpload_Click" Font-Size="Large"/>
             <br /><br />
-            <span class="alert-danger"><h4><%= messageUL %></h4></span>
+            <span style="color:red"><h4><b><%= messageUL %></b></h4></span>
         </center>
     </div>
 </div>
 
 <!------------------------------------------------------------------------------------------->
 
-    <center><span class="alert-danger"><h3><%= messageIP %></h3></span></center>
+    <center><span style="color:red"><h3><b><%= messageIP %></b></h3></span></center>
 
 </asp:Content>
