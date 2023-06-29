@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot</_PublishTargetUrl>
-    <History>True|2023-06-27T01:54:30.0365547Z;True|2023-06-27T09:46:46.4471354+08:00;True|2022-08-23T14:13:52.0580807+08:00;True|2022-08-13T19:18:15.9869605+08:00;True|2022-08-13T19:16:27.7360240+08:00;True|2022-08-13T19:14:00.8934515+08:00;True|2022-08-04T16:03:27.7793308+08:00;True|2022-08-04T15:27:15.4438401+08:00;True|2022-07-30T09:28:14.8707230+08:00;False|2022-07-30T09:25:57.2159258+08:00;True|2022-07-29T21:41:09.5717932+08:00;True|2022-07-29T15:08:20.8984184+08:00;True|2022-07-29T15:04:16.4650290+08:00;</History>
+    <History>True|2023-06-29T07:08:15.4157202Z;True|2023-06-29T15:06:52.2911794+08:00;True|2023-06-27T09:54:30.0365547+08:00;True|2023-06-27T09:46:46.4471354+08:00;True|2022-08-23T14:13:52.0580807+08:00;True|2022-08-13T19:18:15.9869605+08:00;True|2022-08-13T19:16:27.7360240+08:00;True|2022-08-13T19:14:00.8934515+08:00;True|2022-08-04T16:03:27.7793308+08:00;True|2022-08-04T15:27:15.4438401+08:00;True|2022-07-30T09:28:14.8707230+08:00;False|2022-07-30T09:25:57.2159258+08:00;True|2022-07-29T21:41:09.5717932+08:00;True|2022-07-29T15:08:20.8984184+08:00;True|2022-07-29T15:04:16.4650290+08:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -14,6 +14,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Asset/2023Exam.docx">
       <publishTime>07/29/2022 21:43:39</publishTime>
+    </File>
+    <File Include="Asset/2023商管術科考題.docx">
+      <publishTime>06/29/2023 14:32:32</publishTime>
+    </File>
+    <File Include="Asset/2023商管術科考題解答.jpg">
+      <publishTime>06/29/2023 14:32:32</publishTime>
     </File>
     <File Include="Asset/2025術科原始檔.docx">
       <publishTime>06/27/2023 09:31:40</publishTime>
@@ -34,10 +40,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/16/2019 12:33:30</publishTime>
     </File>
     <File Include="bin/IMMustExam.dll">
-      <publishTime>06/27/2023 09:46:45</publishTime>
+      <publishTime>06/29/2023 15:08:15</publishTime>
     </File>
     <File Include="bin/IMMustExam.pdb">
-      <publishTime>06/27/2023 09:46:45</publishTime>
+      <publishTime>06/29/2023 15:08:15</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>07/30/2013 16:57:30</publishTime>
@@ -247,10 +253,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/28/2022 17:30:38</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>07/28/2022 17:30:32</publishTime>
+      <publishTime>06/29/2023 15:01:19</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>06/27/2023 09:29:56</publishTime>
+      <publishTime>06/29/2023 15:06:24</publishTime>
+    </File>
+    <File Include="Example.html">
+      <publishTime>06/29/2023 15:05:31</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>07/28/2022 17:30:32</publishTime>

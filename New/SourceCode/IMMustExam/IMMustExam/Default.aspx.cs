@@ -39,10 +39,10 @@ namespace IMMustExam
 
         protected void ButtonDownload_Click(object sender, EventArgs e)
         {
-            string year = (thisYear + 1).ToString();
+            string year = (thisYear).ToString();
             try
             {
-                string filePathDL = "/Asset/"+ year +"術科原始檔.docx";
+                string filePathDL = "/Asset/"+ year + "商管術科考題.docx";
                 Response.Redirect(filePathDL);
             }
             catch
@@ -73,7 +73,7 @@ namespace IMMustExam
             catch
             {
                 messageUL = "- 遇到狀況外問題，請舉手讓試場工作人員協助交卷 -";
-            }            
+            }           
         }
     }
 }

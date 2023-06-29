@@ -35,3 +35,11 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+a{
+    color: #090909;
+}
+
+.bgGray{
+    background-color: rgb(239,239,239);
+}

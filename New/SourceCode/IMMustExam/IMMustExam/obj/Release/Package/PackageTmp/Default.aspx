@@ -15,7 +15,8 @@
     <div class="panel-body">
         <center>
             <br /><br />
-            <asp:Button ID="ButtonDownload" runat="server" Text="下載試題" OnClick="ButtonDownload_Click" Font-Size="Large"/>
+            <asp:Button ID="ButtonDownload" runat="server" Text="下載試題" OnClick="ButtonDownload_Click" CssClass="btn btn-default bgGray" Font-Size="Large"/>
+            <a href="Example.html" target="_blank" class="btn btn-default bgGray" style="font-size:large ">成品展示</a>
             <br /><br />
             <span style="color:red"><h4><b><%= messageDL %></b></h4></span>
         </center>
