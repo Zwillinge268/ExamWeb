@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Web.UI;
 using System.IO;
+using Microsoft.Office.Interop.Word;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace IMMustExam
 {
-    public partial class _Default : Page
+    public partial class _Default : System.Web.UI.Page
     {
         public string messageUL = null;
         public string messageDL = null;
@@ -12,8 +15,14 @@ namespace IMMustExam
         public string userIP = null;
         public int thisYear = DateTime.Now.Year;
         public int TWYear;
+        public string fileName;
 
         protected void Page_Load(object sender, EventArgs e)
+        {
+            IPGet();
+        }
+
+        protected void IPGet()
         {
             TWYear = thisYear - 1911;
             try
@@ -24,7 +33,7 @@ namespace IMMustExam
             catch
             {
                 IPCheck();
-            }           
+            }
         }
 
         protected void IPCheck()
@@ -58,12 +67,15 @@ namespace IMMustExam
                 if (FileUpload1.HasFile)
                 {
                     string filePath = "C:/inetpub/wwwroot/Upload/";
-                    string fileName = FileUpload1.PostedFile.FileName;
+                    fileName = FileUpload1.PostedFile.FileName;
 
                     string fileExtension = Path.GetExtension(fileName);
                     if (fileExtension.ToLower() == ".docx")
                     {
                         FileUpload1.SaveAs(filePath + fileName);
+                        
+                        AddNameToWordFile(filePath + fileName);                        
+                        
                         Response.Redirect("UploadSuccess.aspx");
                     }
                     else messageUL = "- 上傳失敗(僅限上傳 *.docx 檔) -";                                        
@@ -74,6 +86,24 @@ namespace IMMustExam
             {
                 messageUL = "- 遇到狀況外問題，請舉手讓試場工作人員協助交卷 -";
             }           
+        }
+
+        private void AddNameToWordFile(string fullPath)
+        {            
+            Application word = new Application();
+            Document doc = word.Documents.Open(fullPath);
+
+            Paragraph newParagraph = doc.Content.Paragraphs.Last;
+            newParagraph.Range.Font.Size = 20;
+            newParagraph.Range.Font.Color = WdColor.wdColorBlack;
+
+            newParagraph.Range.Text = fileName;
+
+            doc.Save();
+            doc.Close();
+            Marshal.ReleaseComObject(doc);
+            word.Quit();
+            Marshal.ReleaseComObject(word);
         }
     }
 }
